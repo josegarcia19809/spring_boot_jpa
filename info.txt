@@ -1,9 +1,9 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Nuevo proyecto con JPA
+JPA e Hibernate: Añadiendo la clase Entity Person
 
-Añadiendo la clase Entity
+
 09:22
 Añadiendo el componente Repository con CrudRepository de Spring Data JPA
 08:39
