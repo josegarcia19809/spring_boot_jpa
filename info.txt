@@ -1,0 +1,67 @@
+Spring Framework 6 & Spring Boot 3 desde cero a experto
+Andrés Guzmán
+
+JPA e Hibernate: Nuevo proyecto con JPA
+
+Añadiendo la clase Entity
+09:22
+Añadiendo el componente Repository con CrudRepository de Spring Data JPA
+08:39
+Configurando las propiedades de conexión a la Base de Datos y de JPA
+08:57
+Instalando MySQL en MacOS
+07:48
+Instalando MySQL en Windows
+11:34
+Creando la base de datos del ejemplo y la tabla
+08:32
+Importando datos de ejemplo y mostrando el listado de objetos
+06:21
+Consultas personalizadas con anotación @Query y nomenclatura Query Methods
+15:58
+Devolviendo campos separados y valores del objeto entity
+14:48
+Obtener uno solo objeto con findById
+10:10
+Consultas personalizadas con @Query y Query Methods (obtener un solo objeto)
+16:31
+Crear nuevo registro en la base de datos
+03:17
+Crear y la anotación @Transactional
+11:10
+Actualizar registros con el método save del CrudRepository
+12:22
+Eliminar registros con el método deleteById del CrudRepository
+07:34
+Eliminar registros con el método delete del CrudRepository
+10:23
+JPQL campos personalizados
+11:27
+JPQL campos personalizados parte 2
+13:44
+JPQL instanciación dinámica de clase entity personalizada
+11:56
+JPQL instanciación dinámica de clase DTO personalizada
+10:09
+Usando DISTINCT palabra clave de JPQL / HQL
+11:53
+Funciones JPQL concat, upper, lower y operador like
+11:12
+Usando palabras claves between de JPQL
+07:34
+Usando between basado en el nombre del metodo (Query Method)
+04:43
+Usando palabras claves order by de JPQL y Query Method
+11:37
+Usando palabras claves order by parte 2
+05:40
+Funciones JPQL de agregación count, max y min
+07:42
+Función JPQL length
+10:59
+Funciones JPQL de agregación count, sum, max, min, avg
+06:46
+Subquery o subconsulta en JPQL
+10:52
+Operador Where in en JPQL
+
