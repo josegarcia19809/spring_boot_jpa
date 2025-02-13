@@ -11,7 +11,7 @@ public class Person {
     private String name;
     private String lastname;
 
-    @Column(name = "programming_language")
+    @Column(name = "programming_languagœe")
     private String programmingLanguage;
 
     public Person(Long id, String name, String lastname, String programmingLanguage) {
@@ -37,7 +37,7 @@ public class Person {
     }
 
     public void setName(String name) {
-        this.name = name;<
+        this.name = name;
     }
 
     public String getLastname() {
