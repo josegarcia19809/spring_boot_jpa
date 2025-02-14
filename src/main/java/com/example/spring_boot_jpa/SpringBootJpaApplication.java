@@ -22,7 +22,9 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        System.out.println("-".repeat(100));
         List<Person> persons = (List<Person>) personRepository.findAll();
         persons.forEach(System.out::println);
+        System.out.println("-".repeat(100));
     }
 }
