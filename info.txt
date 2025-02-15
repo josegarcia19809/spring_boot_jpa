@@ -1,14 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Consultas personalizadas con anotación @Query y nomenclatura Query Methods
+JPA e Hibernate: Devolviendo campos separados y valores del objeto entity
 
-
-06:21
-
-15:58
-Devolviendo campos separados y valores del objeto entity
-14:48
 Obtener uno solo objeto con findById
 10:10
 Consultas personalizadas con @Query y Query Methods (obtener un solo objeto)

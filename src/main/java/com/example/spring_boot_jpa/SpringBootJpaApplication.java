@@ -31,5 +31,29 @@ public class SpringBootJpaApplication implements CommandLineRunner {
                 .findByProgrammingLanguageAndName("Python", "Pepe");
         persons.forEach(System.out::println);
         System.out.println("-".repeat(100));
+
+        List<Object[]> personsValues = personRepository.obtenerPersonData();
+        personsValues.forEach(person -> {
+            System.out.println(person[0] + " es experto en " + person[1]);
+        });
+        System.out.println("-".repeat(100));
+
+        List<Object[]> personsValuesProgrammingAndName = personRepository.obtenerPersonData("Java", "Andres");
+        personsValuesProgrammingAndName.forEach(person -> {
+            System.out.println(person[0] + " es experto en " + person[1]);
+        });
+        System.out.println("-".repeat(100));
+
+        List<Object[]> personsValuesByName = personRepository.obtenerPersonDataByName("Maria");
+        personsValuesByName.forEach(person -> {
+            System.out.println(person[0] + " es experto en " + person[1]);
+        });
+        System.out.println("-".repeat(100));
+
+        List<Object[]> personsValuesByLanguage = personRepository.obtenerPersonDataByProgrammingLanguage("Java");
+        personsValuesByLanguage.forEach(person -> {
+            System.out.println(person[0] + " es experto en " + person[1]);
+        });
+        System.out.println("-".repeat(100));
     }
 }
