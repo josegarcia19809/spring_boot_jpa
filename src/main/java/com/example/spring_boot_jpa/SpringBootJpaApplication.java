@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
+import java.util.Optional;
 
 @SpringBootApplication
 public class SpringBootJpaApplication implements CommandLineRunner {
@@ -54,6 +55,22 @@ public class SpringBootJpaApplication implements CommandLineRunner {
         personsValuesByLanguage.forEach(person -> {
             System.out.println(person[0] + " es experto en " + person[1]);
         });
+        System.out.println("-".repeat(100));
+
+        // Obtener uno solo objeto con findById
+        Person person = personRepository.findById(2L).orElseThrow();
+        System.out.println(person);
+        System.out.println("-".repeat(100));
+
+        Person thePerson = null;
+        Optional<Person> personOptional = personRepository.findById(3L);
+        if (personOptional.isPresent()) {
+            thePerson = personOptional.get();
+        }
+        System.out.println(thePerson);
+        System.out.println("-".repeat(100));
+
+        personRepository.findById(4L).ifPresent(person1 -> System.out.println(person1));
         System.out.println("-".repeat(100));
     }
 }

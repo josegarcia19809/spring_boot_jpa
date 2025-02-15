@@ -1,9 +1,9 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Devolviendo campos separados y valores del objeto entity
+JPA e Hibernate: Obtener uno solo objeto con findById
 
-Obtener uno solo objeto con findById
+
 10:10
 Consultas personalizadas con @Query y Query Methods (obtener un solo objeto)
 16:31
