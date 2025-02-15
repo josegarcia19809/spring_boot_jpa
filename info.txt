@@ -1,11 +1,11 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Importando datos de ejemplo y mostrando el listado de objetos
+JPA e Hibernate: Consultas personalizadas con anotación @Query y nomenclatura Query Methods
 
 
 06:21
-Consultas personalizadas con anotación @Query y nomenclatura Query Methods
+
 15:58
 Devolviendo campos separados y valores del objeto entity
 14:48
