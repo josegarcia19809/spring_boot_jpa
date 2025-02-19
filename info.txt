@@ -1,9 +1,9 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Consultas personalizadas con @Query y Query Methods (obtener un solo objeto)
+JPA e Hibernate: Crear nuevo registro en la base de datos
 
-Crear nuevo registro en la base de datos
+
 03:17
 Crear y la anotación @Transactional
 11:10

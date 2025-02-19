@@ -84,5 +84,15 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
         personRepository.findByNameContaining("And").ifPresent(person1 -> System.out.println(person1));
         System.out.println("-".repeat(100));
+
+        create();
+    }
+
+    public void create() {
+        Person person = new Person(null, "Carolina", "G", "Python");
+        personRepository.save(person);
+        List<Person> persons = (List<Person>) personRepository.findAll();
+        persons.forEach(System.out::println);
+        System.out.println("-".repeat(100));
     }
 }
