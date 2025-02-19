@@ -1,12 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Obtener uno solo objeto con findById
+JPA e Hibernate: Consultas personalizadas con @Query y Query Methods (obtener un solo objeto)
 
-
-10:10
-Consultas personalizadas con @Query y Query Methods (obtener un solo objeto)
-16:31
 Crear nuevo registro en la base de datos
 03:17
 Crear y la anotación @Transactional
