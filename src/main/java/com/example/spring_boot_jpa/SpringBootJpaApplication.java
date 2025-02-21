@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
 @SpringBootApplication
 public class SpringBootJpaApplication implements CommandLineRunner {
@@ -20,9 +22,13 @@ public class SpringBootJpaApplication implements CommandLineRunner {
         SpringApplication.run(SpringBootJpaApplication.class, args);
     }
 
-
     @Override
     public void run(String... args) throws Exception {
+        create();
+    }
+
+    @Transactional(readOnly = true)
+    public void consultas() {
         System.out.println("-".repeat(100));
         // List<Person> persons = (List<Person>) personRepository.findAll();
         // List<Person> persons = (List<Person>) personRepository.findByProgrammingLanguage("Python");
@@ -84,15 +90,23 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
         personRepository.findByNameContaining("And").ifPresent(person1 -> System.out.println(person1));
         System.out.println("-".repeat(100));
-
-        create();
     }
 
+    @Transactional
     public void create() {
-        Person person = new Person(null, "Carolina", "G", "Python");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Name: ");
+        String name = scanner.next();
+        System.out.println("Last Name: ");
+        String lastName = scanner.next();
+        System.out.println("Programming Language: ");
+        String programmingLanguage = scanner.next();
+        scanner.close();
+
+        Person person = new Person(null, name, lastName, programmingLanguage);
         personRepository.save(person);
-        List<Person> persons = (List<Person>) personRepository.findAll();
-        persons.forEach(System.out::println);
+
+        personRepository.findById(person.getId()).ifPresent(person1 -> System.out.println(person1));
         System.out.println("-".repeat(100));
     }
 }

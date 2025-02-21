@@ -1,12 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Crear nuevo registro en la base de datos
+JPA e Hibernate: Crear y la anotación @Transactional
 
-
-03:17
-Crear y la anotación @Transactional
-11:10
 Actualizar registros con el método save del CrudRepository
 12:22
 Eliminar registros con el método deleteById del CrudRepository
