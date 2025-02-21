@@ -24,7 +24,7 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        delete();
+        delete2();
     }
 
     @Transactional(readOnly = true)
@@ -112,12 +112,30 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Transactional
     public void delete() {
-        personRepository.findAll().forEach(System.out::println);
+        mostrarTodos();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese el id: ");
         Long id = scanner.nextLong();
         personRepository.deleteById(id);
-        personRepository.findAll().forEach(System.out::println);
+        mostrarTodos();
+        scanner.close();
+    }
+
+    @Transactional
+    public void delete2() {
+        mostrarTodos();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el id: ");
+        Long id = scanner.nextLong();
+        Optional<Person> personOptional = personRepository.findById(id);
+        personOptional.ifPresentOrElse(person -> personRepository.delete(person),
+                () -> {
+                    System.out.println("No se encontro el id: " + id);
+                }
+        );
+
+        mostrarTodos();
         scanner.close();
     }
 
@@ -142,6 +160,13 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
 
         scanner.close();
+    }
+
+    @Transactional(readOnly = true)
+    public void mostrarTodos() {
+        System.out.println("-".repeat(100));
+        personRepository.findAll().forEach(System.out::println);
+        System.out.println("-".repeat(100));
     }
 }
 

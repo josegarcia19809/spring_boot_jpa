@@ -1,14 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Eliminar registros con el método deleteById del CrudRepository
+JPA e Hibernate: Eliminar registros con el método delete del CrudRepository
 
-
-12:22
-
-07:34
-Eliminar registros con el método delete del CrudRepository
-10:23
 JPQL campos personalizados
 11:27
 JPQL campos personalizados parte 2
