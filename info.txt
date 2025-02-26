@@ -1,9 +1,9 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: JPQL campos personalizados parte 2
+JPA e Hibernate: JPQL instanciación dinámica de clase entity personalizada
 
-JPQL instanciación dinámica de clase entity personalizada
+
 11:56
 JPQL instanciación dinámica de clase DTO personalizada
 10:09

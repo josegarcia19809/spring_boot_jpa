@@ -14,6 +14,11 @@ public class Person {
     @Column(name = "programming_language")
     private String programmingLanguage;
 
+    public Person(String name, String lastname) {
+        this.name = name;
+        this.lastname = lastname;
+    }
+
     public Person(Long id, String name, String lastname, String programmingLanguage) {
         this.id = id;
         this.name = name;
