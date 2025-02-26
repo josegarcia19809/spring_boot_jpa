@@ -1,9 +1,9 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Eliminar registros con el método delete del CrudRepository
+JPA e Hibernate: JPQL campos personalizados
 
-JPQL campos personalizados
+
 11:27
 JPQL campos personalizados parte 2
 13:44
