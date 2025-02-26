@@ -1,12 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: JPQL instanciación dinámica de clase entity personalizada
+JPA e Hibernate: JPQL instanciación dinámica de clase DTO personalizada
 
-
-11:56
-JPQL instanciación dinámica de clase DTO personalizada
-10:09
 Usando DISTINCT palabra clave de JPQL / HQL
 11:53
 Funciones JPQL concat, upper, lower y operador like

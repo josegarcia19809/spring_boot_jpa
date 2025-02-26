@@ -1,5 +1,6 @@
 package com.example.spring_boot_jpa;
 
+import com.example.spring_boot_jpa.dto.PersonDTO;
 import com.example.spring_boot_jpa.entities.Person;
 import com.example.spring_boot_jpa.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,15 +31,22 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Transactional(readOnly = true)
     public void personalizedQueries2() {
+        System.out.println("-".repeat(100));
         System.out.println("Consulta por objeto persona y lenguaje de programación");
         List<Object[]> personasRegs = personRepository.findAllMixPersonDataList();
         personasRegs.forEach(reg -> {
             System.out.println("Programming Language: " + reg[1] + "\t\t\tPerson: " + reg[0]);
         });
 
+        System.out.println("-".repeat(100));
         System.out.println("Consulta por objeto persona que devuelve una instancia personalizada");
         List<Person> personas = personRepository.findAllObjectPersonPersonalized();
         personas.forEach(System.out::println);
+
+        System.out.println("-".repeat(100));
+        System.out.println("Consulta que devuelve objeto DTO de una clase personalizada");
+        List<PersonDTO> personasDTO= personRepository.findAllPersonDto();
+        personasDTO.forEach(System.out::println);
 
     }
 
