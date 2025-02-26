@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
@@ -38,6 +39,22 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
         System.out.println("-".repeat(100));
         System.out.println("FullName: " + personRepository.getFullNameById(id));
+
+        System.out.println("-".repeat(100));
+        System.out.println("Consulta por datos personalizados por id");
+        Optional<Object> optionalPersonReg = personRepository.obtenerPersonDataById(id);
+        if (optionalPersonReg.isPresent()) {
+            Object[] personReg = (Object[]) optionalPersonReg.orElseThrow();
+            System.out.println("id=" + personReg[0] + ", name=" + personReg[1] + ", fullName=" +
+                    personReg[2] + ", language=" + personReg[3]);
+        }
+
+
+        System.out.println("-".repeat(100));
+        System.out.println("Consulta por campos personalizados lista");
+        List<Object[]> regs = personRepository.obtenerPersonDataList();
+        regs.forEach(reg -> System.out.println("id=" + reg[0] + ", name=" + reg[1] + ", fullName=" +
+                reg[2] + ", language=" + reg[3]));
 
         scanner.close();
     }
