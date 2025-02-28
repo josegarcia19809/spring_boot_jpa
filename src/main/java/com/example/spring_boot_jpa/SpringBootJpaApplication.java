@@ -26,7 +26,30 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        personalizedQueries2();
+        personalizedQueriesDistinct();
+    }
+
+    @Transactional(readOnly = true)
+    public void personalizedQueriesDistinct() {
+        System.out.println("Consultas con nombres de personas");
+        List<String> names = personRepository.findAllNames();
+        names.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas con nombres únicos de personas");
+        List<String> namesD = personRepository.findAllNamesDistinct();
+        namesD.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas con nombres únicos de lenguajes de programación");
+        List<String> namesLanguagesD = personRepository.findAllProgrammingLanguagesDistinct();
+        namesLanguagesD.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Cantidad de nombres únicos de lenguajes de programación");
+        Long totalLanguages = personRepository.findAllProgrammingLanguagesDistinctCount();
+        System.out.println(totalLanguages);
+        System.out.println("-".repeat(100));
     }
 
     @Transactional(readOnly = true)
@@ -45,7 +68,7 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
         System.out.println("-".repeat(100));
         System.out.println("Consulta que devuelve objeto DTO de una clase personalizada");
-        List<PersonDTO> personasDTO= personRepository.findAllPersonDto();
+        List<PersonDTO> personasDTO = personRepository.findAllPersonDto();
         personasDTO.forEach(System.out::println);
 
     }
