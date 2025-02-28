@@ -1,12 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Usando DISTINCT palabra clave de JPQL / HQL
+JPA e Hibernate: Funciones JPQL concat, upper, lower y operador like
 
-
-11:53
-Funciones JPQL concat, upper, lower y operador like
-11:12
 Usando palabras claves between de JPQL
 07:34
 Usando between basado en el nombre del metodo (Query Method)
