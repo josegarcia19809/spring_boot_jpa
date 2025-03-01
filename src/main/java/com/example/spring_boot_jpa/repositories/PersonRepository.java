@@ -10,6 +10,14 @@ import java.util.Optional;
 
 public interface PersonRepository extends CrudRepository<Person, Long> {
 
+    // No incluye la P
+    @Query("select p from Person p where p.name between 'J' and 'P'")
+    List<Person> findAllBetweenJP();
+
+    // Incluye el 5
+    @Query("select p from Person p where p.id between 2 and 5")
+    List<Person> findAllBetween2and5();
+
     // @Query("select CONCAT( p.name, ' ', p.lastname) as fullname from Person p")
     @Query("select p.name || ' ' || p.lastname as fullname from Person p")
     List<String> findAllFullNameConcat();
