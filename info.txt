@@ -1,12 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Usando palabras claves between de JPQL
+JPA e Hibernate: Usando between basado en el nombre del metodo (Query Method)
 
-
-07:34
-Usando between basado en el nombre del metodo (Query Method)
-04:43
 Usando palabras claves order by de JPQL y Query Method
 11:37
 Usando palabras claves order by parte 2

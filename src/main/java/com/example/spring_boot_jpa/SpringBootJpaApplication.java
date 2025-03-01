@@ -40,6 +40,26 @@ public class SpringBootJpaApplication implements CommandLineRunner {
         List<Person> personsJP = personRepository.findAllBetweenJP();
         personsJP.forEach(System.out::println);
         System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de id dados por el usuario");
+        List<Person> personsId1andId2 = personRepository.findAllBetweenId1andId2(2, 6);
+        personsId1andId2.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de nombre");
+        List<Person> personsC1andC2 = personRepository.findAllBetweenC1andC2("C", "N");
+        personsC1andC2.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de id dados por el usuario generados por JPA");
+        List<Person> personsId1andId2L = personRepository.findByIdBetween(2L, 6L);
+        personsId1andId2L.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de nombre generados por JPA");
+        List<Person> personsC1andC2N = personRepository.findByNameBetween("C", "N");
+        personsC1andC2N.forEach(System.out::println);
+        System.out.println("-".repeat(100));
     }
 
     @Transactional(readOnly = true)
