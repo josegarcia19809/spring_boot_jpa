@@ -56,7 +56,22 @@ public class SpringBootJpaApplication implements CommandLineRunner {
         personsId1andId2NombreDesc.forEach(System.out::println);
         System.out.println("-".repeat(100));
 
-//
+        System.out.println("Personas ordenadas por Lenguajes de programación desc");
+        List<Person> personsOrdenadosLPDesc = personRepository.findAllProgrammingLanguage();
+        personsOrdenadosLPDesc.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Personas ordenadas por Lenguajes de programación desc");
+        personsOrdenadosLPDesc = personRepository.findAllByOrderByProgrammingLanguageDesc();
+        personsOrdenadosLPDesc.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Personas ordenadas por Lenguajes de programación desc, nombre asc");
+        personsOrdenadosLPDesc = personRepository.findAllByOrderByProgrammingLanguageDescNameAsc();
+        personsOrdenadosLPDesc.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+
     }
 
     @Transactional(readOnly = true)

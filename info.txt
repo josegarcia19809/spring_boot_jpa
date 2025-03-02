@@ -1,10 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Usando palabras claves order by de JPQL y Query Method
+JPA e Hibernate: Usando palabras claves order by parte 2
 
-Usando palabras claves order by parte 2
-05:40
 Funciones JPQL de agregación count, max y min
 07:42
 Función JPQL length
