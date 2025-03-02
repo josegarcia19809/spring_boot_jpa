@@ -26,7 +26,14 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        personalizedQueriesOrder();
+        personalizedQueriesAggregation();
+    }
+
+    @Transactional(readOnly = true)
+    public void personalizedQueriesAggregation() {
+        System.out.println("Total de personas: " + personRepository.totalPersons());
+        System.out.println("Id mínimo: " + personRepository.minID());
+        System.out.println("Language Programming max: " + personRepository.maxProgrammingLanguage());
     }
 
     @Transactional(readOnly = true)

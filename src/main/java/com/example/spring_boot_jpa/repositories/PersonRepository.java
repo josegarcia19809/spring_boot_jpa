@@ -10,6 +10,15 @@ import java.util.Optional;
 
 public interface PersonRepository extends CrudRepository<Person, Long> {
 
+    @Query("select max (p.programmingLanguage) from Person p")
+    String maxProgrammingLanguage();
+
+    @Query("select min (p.id) from Person p")
+    Long minID();
+
+    @Query("select count (p) from Person p")
+    Long totalPersons();
+
     List<Person> findAllByOrderByProgrammingLanguageDescNameAsc();
 
     List<Person> findAllByOrderByProgrammingLanguageDesc();
