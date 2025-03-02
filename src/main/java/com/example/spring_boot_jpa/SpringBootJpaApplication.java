@@ -26,7 +26,37 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        personalizedQueriesBetween();
+        personalizedQueriesOrder();
+    }
+
+    @Transactional(readOnly = true)
+    public void personalizedQueriesOrder() {
+        System.out.println("Consultas por rangos de id dados por el usuario ordenados por nombre");
+        List<Person> personsId1andId2 = personRepository.findAllBetweenId1andId2OrderByName(2, 6);
+        personsId1andId2.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de nombre ordenados por nombre");
+        List<Person> personsC1andC2 = personRepository.findAllBetweenC1andC2OrderByName("C", "N");
+        personsC1andC2.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de nombre ordenados por nombre y apellido desc");
+        List<Person> personsC1andC2desc = personRepository.findAllBetweenC1andC2OrderByNameAndLastNameDesc("C", "N");
+        personsC1andC2desc.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de nombre ordenados por nombre desc");
+        List<Person> personsC1andC2NombreDesc = personRepository.findByNameBetweenOrderByNameDesc("C", "N");
+        personsC1andC2NombreDesc.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+        System.out.println("Consultas por rangos de id ordenados por id desc");
+        List<Person> personsId1andId2NombreDesc = personRepository.findByIdBetweenOrderByIdDesc(2L, 6L);
+        personsId1andId2NombreDesc.forEach(System.out::println);
+        System.out.println("-".repeat(100));
+
+//
     }
 
     @Transactional(readOnly = true)
