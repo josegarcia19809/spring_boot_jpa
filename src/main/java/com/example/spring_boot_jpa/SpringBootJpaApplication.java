@@ -26,7 +26,22 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        subQueries();
+        whereIn();
+    }
+
+    @Transactional(readOnly = true)
+    public void whereIn() {
+        System.out.println("----------Consultas Where in");
+        List<Person> persons = personRepository.getPersonsByIds();
+        persons.forEach(System.out::println);
+
+        System.out.println("----------Consultas Where in List");
+        persons = personRepository.getPersonsByIdsList(Arrays.asList(1L, 2L, 5L, 6L, 8L));
+        persons.forEach(System.out::println);
+
+        System.out.println("----------Consultas Where NOT in List");
+        persons = personRepository.getPersonsByIdsListNot(Arrays.asList(1L, 2L, 5L, 6L, 8L));
+        persons.forEach(System.out::println);
     }
 
     @Transactional(readOnly = true)

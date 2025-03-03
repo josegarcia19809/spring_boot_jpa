@@ -1,7 +1,7 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Subquery o subconsulta en JPQL
+JPA e Hibernate: Operador Where in en JPQL
 
-Operador Where in en JPQL
+
 
