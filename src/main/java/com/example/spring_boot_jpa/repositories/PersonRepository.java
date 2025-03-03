@@ -10,6 +10,15 @@ import java.util.Optional;
 
 public interface PersonRepository extends CrudRepository<Person, Long> {
 
+    @Query("select max(length(p.lastname)) from Person p")
+    public Integer getMaxLengthLastname();
+
+    @Query("select min(length(p.lastname)) from Person p")
+    public Integer getMinLengthLastname();
+
+    @Query("select p.name, length(p.name) from Person p")
+    List<Object[]> getPersonNameLength();
+
     @Query("select max (p.programmingLanguage) from Person p")
     String maxProgrammingLanguage();
 
