@@ -1,11 +1,7 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 Andrés Guzmán
 
-JPA e Hibernate: Funciones JPQL de agregación count, sum, max, min, avg
+JPA e Hibernate: Subquery o subconsulta en JPQL
 
-
-06:46
-Subquery o subconsulta en JPQL
-10:52
 Operador Where in en JPQL
 
